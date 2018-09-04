@@ -1,13 +1,20 @@
 import datetime,time
 import pytz
 from prettyTime import isTimePretty
-utc_now = pytz.utc.localize(datetime.datetime.utcnow())
+import telebot,inits
 
-# print utc_now
-# print utc_now.astimezone(pytz.timezone("Asia/Tehran"))
+bot = telebot.TeleBot(inits.tel_token)
+
+
+@bot.message_handler(content_types=['text'])
+def send_welcome(message):
+    print message
+    bot.reply_to(message, "Howdy, how are you doing?")
+
 
 while(True):
+    bot.polling()
     d_aware = pytz.timezone("Etc/GMT").localize(datetime.datetime.now())
     print d_aware.astimezone(pytz.timezone("Asia/Tehran")).time()
     print isTimePretty(d_aware.astimezone(pytz.timezone("Asia/Tehran")).time())
-    time.sleep(30)
+    time.sleep(1)
