@@ -17,7 +17,7 @@ def send_welcome(message):
 
 while(True):
     try:
-        bot.polling()
+        # bot.polling()
 
         d_aware = pytz.timezone("Etc/GMT").localize(datetime.datetime.now())
         print d_aware.astimezone(pytz.timezone("Asia/Tehran")).time()
