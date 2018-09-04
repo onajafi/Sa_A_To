@@ -9,7 +9,7 @@ bot = telebot.TeleBot(inits.tel_token)
 @bot.message_handler(content_types=['text'])
 def send_welcome(message):
     print message
-    bot.reply_to(message, "Howdy, how are you doing?")
+    bot.send_message(inits.chat_id, "Salam")
 
 
 while(True):
