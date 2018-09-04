@@ -11,5 +11,5 @@ import pytz
 utc_now = pytz.utc.localize(datetime.datetime.utcnow())
 # print utc_now
 # print utc_now.astimezone(pytz.timezone("Asia/Tehran"))
-d_aware = pytz.timezone("Asia/Tehran").localize(datetime.datetime.now())
-print d_aware.astimezone(pytz.timezone("America/Los_Angeles")).time()
+d_aware = pytz.timezone("Etc/GMT").localize(datetime.datetime.now())
+print d_aware.astimezone(pytz.timezone("Asia/Tehran")).time()
