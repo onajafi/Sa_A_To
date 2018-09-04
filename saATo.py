@@ -17,6 +17,7 @@ def send_welcome(message):
 
 while(True):
     try:
+        bot.polling()
 
         d_aware = pytz.timezone("Etc/GMT").localize(datetime.datetime.now())
         print d_aware.astimezone(pytz.timezone("Asia/Tehran")).time()
@@ -25,8 +26,7 @@ while(True):
         if(timeIsPretty):
             time.sleep(1)
             bot.send_message(inits.chat_id,"ساعتو")
-    except KeyboardInterrupt:
-        break
     except:
         pass
     time.sleep(5)
+print "Got out"
