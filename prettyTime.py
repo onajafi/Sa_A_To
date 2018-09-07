@@ -24,6 +24,6 @@ def isTimePretty(time):
 
 if __name__ == "__main__":
     from datetime import datetime
-    print datetime(2011, 8, 15, 0, 0, 0, 0)
+    # print datetime(2011, 8, 15, 0, 0, 0, 0)
 
-    print isTimePretty(datetime(2011, 8, 21, 21, 12, 0, 0))
+    print isTimePretty(datetime(2011, 8, 01, 22, 22, 0, 0))
