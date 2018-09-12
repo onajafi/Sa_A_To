@@ -26,8 +26,8 @@ while(True):
         timeIsPretty = isTimePretty(d_aware.astimezone(pytz.timezone("Asia/Tehran")).time())
         print timeIsPretty
         if(timeIsPretty and
-            last_min != d_aware.astimezone(pytz.timezone("Asia/Tehran")).time().minute
-              or last_hour != d_aware.astimezone(pytz.timezone("Asia/Tehran")).time().hour
+               (last_min != d_aware.astimezone(pytz.timezone("Asia/Tehran")).time().minute
+              or last_hour != d_aware.astimezone(pytz.timezone("Asia/Tehran")).time().hour)
            ):
             last_min = d_aware.astimezone(pytz.timezone("Asia/Tehran")).time().minute
             last_hour = d_aware.astimezone(pytz.timezone("Asia/Tehran")).time().hour
